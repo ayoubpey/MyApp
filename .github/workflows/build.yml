@@ -22,7 +22,7 @@ jobs:
             git zip unzip openjdk-17-jdk \
             python3-pip autoconf libtool pkg-config \
             zlib1g-dev libncurses5-dev libffi-dev libssl-dev \
-            android-sdk-build-tools
+            build-essential
 
       - name: Install Buildozer
         run: |
@@ -31,4 +31,4 @@ jobs:
 
       - name: Build APK
         run: |
-          buildozer android debug
+          buildozer -v android debug
